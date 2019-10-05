@@ -33,6 +33,9 @@ class AIController:
         expMatrix = np.exp(inputMatrix - maxInput);
         expSum = np.sum(expMatrix)
         return expMatrix/expSum
+    
+    def mean_squared_error(self, y, t):
+        return 0.5 * np.sum((y-t)**2)
 
 a = AIController()
 print(a.forword(np.array([0.2, 0.1])))
